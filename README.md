@@ -1,8 +1,8 @@
-# Company Report
+# Job Application Strategist
 
 기업 조사, 채용공고 분석, 지원 전략과 면접 자료를 기업별로 모아 보는 **Career Workspace**입니다. 실제 지원 준비에 사용하는 정적 웹 도구입니다.
 
-**[사이트 열기 →](https://nana-park.github.io/company-report/)**
+**[사이트 열기 →](https://nana-park.github.io/job-application-strategist/)**
 
 ![Career Workspace의 기업 목록 화면](docs/images/career-workspace.jpg)
 
@@ -30,4 +30,4 @@ HTML, CSS, JavaScript로 구성되어 있으며 별도의 빌드 과정 없이 G
 
 실제 서비스와 개발용 샘플은 구분됩니다. `tools/` 아래의 `synthetic`·`demo` 테스트 페이지에는 합성 데이터와 공개 테스트용 키가 사용되므로 해당 표기를 유지합니다. 개인 문서, 실제 비밀번호와 비밀키는 테스트 페이지나 공개 저장소에 넣지 않습니다.
 
-저장소 이름 변경 후 사이트 주소는 `https://nana-park.github.io/company-report/`입니다. 이전 `company-report-demo/` Pages 주소를 저장해 두었다면 새 주소로 갱신해 주세요.
+저장소 이름 변경 후 사이트 주소는 `https://nana-park.github.io/job-application-strategist/`입니다. 이전 `company-report-demo/` Pages 주소를 저장해 두었다면 새 주소로 갱신해 주세요.
