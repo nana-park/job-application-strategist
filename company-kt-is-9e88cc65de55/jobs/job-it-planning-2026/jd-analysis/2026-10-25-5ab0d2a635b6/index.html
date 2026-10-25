@@ -1,0 +1,207 @@
+<!-- offline-jd-analysis:bundle:v1 -->
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>KT IS IT기획 JD 분석</title>
+<style>
+@font-face { font-family:Pretendard; src:url('../../../../../assets/fonts/PretendardVariable.woff2') format('woff2'); font-weight:100 900; font-display:swap; }
+:root { --page:#fff; --surface:#f9fafb; --heading:#18181b; --body:#27272a; --muted:#71717a; --line:#e5e7eb; --radius:8px; }
+* { box-sizing:border-box; }
+html { scroll-behavior:auto; scroll-padding-top:88px; }
+body { margin:0; min-width:0; color:var(--body); background:var(--page); font:14px/1.65 Pretendard,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif; word-break:keep-all; overflow-wrap:anywhere; }
+a { color:inherit; text-underline-offset:3px; }
+a,summary { cursor:pointer; }
+:focus-visible { outline:2px solid var(--heading); outline-offset:4px; }
+.skip-link { position:absolute; left:20px; top:-80px; padding:10px; background:white; }
+.skip-link:focus { top:8px; }
+.shell { max-width:1040px; margin:auto; padding:32px 32px 64px; }
+.back-link { display:inline-flex; align-items:center; gap:8px; min-height:44px; margin:0 0 20px; font-size:13px; line-height:14px; font-weight:500; color:var(--muted); text-decoration:none; }
+.back-link svg { display:block; flex:0 0 14px; width:14px; height:14px; }
+.back-link span { display:block; line-height:14px; }
+.back-link:hover { color:var(--heading); text-decoration:underline; }
+@media print { .back-link { display:none!important; } }
+.eyebrow,.meta,.references { color:var(--muted); font-size:12px; }
+.eyebrow { letter-spacing:.025em; font-weight:600; }
+h1,h2,h3 { color:var(--heading); font-weight:500; }
+h1 { margin:8px 0 12px; font-size:32px; line-height:1.35; letter-spacing:-.04em; }
+h2 { font-size:18px; line-height:1.4; margin:0 0 14px; letter-spacing:-.025em; }
+h3 { font-size:15px; margin:0 0 8px; line-height:1.5; }
+p { margin:0 0 10px; }
+p:last-child { margin-bottom:0; }
+.meta { display:flex; gap:6px 16px; flex-wrap:wrap; }
+.status { margin-top:12px; color:var(--muted); font-size:12px; }
+.lead { font-size:15px; line-height:1.75; margin-top:20px; max-width:850px; }
+.lead p + p { margin-top:8px; }
+section { margin-top:30px; }
+.cards { display:grid; grid-template-columns:1fr; gap:12px; }
+.card { border:1px solid var(--line); border-radius:var(--radius); padding:18px; min-width:0; }
+.qualifications { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.qualifications .cards { grid-template-columns:1fr; }
+.references { margin-top:10px; }
+details { border:1px solid var(--line); border-radius:var(--radius); margin:10px 0; }
+summary { padding:15px 18px; font-size:14px; font-weight:600; line-height:1.6; }
+summary::marker { color:var(--muted); }
+.detail-body { border-top:1px solid var(--line); padding:16px 18px 18px; }
+dl { margin:0; }
+dt { font-size:12px; color:var(--muted); font-weight:600; margin-top:14px; }
+dt:first-child { margin-top:0; }
+dd { margin:4px 0 0; }
+ul { padding-left:20px; margin:0 0 12px; }
+li { margin:6px 0; }
+.table-wrap { overflow-x:auto; max-width:100%; margin:12px 0; }
+table { border-collapse:collapse; width:100%; font-size:13px; }
+th,td { border-bottom:1px solid var(--line); padding:10px; text-align:left; vertical-align:top; min-width:110px; }
+th { background:var(--surface); font-weight:600; }
+.sources { font-size:13px; }
+.sources li { margin:12px 0; scroll-margin-top:20px; }
+[id] { scroll-margin-top:20px; }
+footer { margin-top:32px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; }
+@media (max-width:680px) {
+.shell { padding:20px 20px 40px; }
+h1 { font-size:28px; }
+.cards,.qualifications { grid-template-columns:1fr; }
+.qualifications { gap:0; }
+.card { padding:16px; }
+summary { padding:14px 16px; }
+.detail-body { padding:14px 16px 16px; }
+}
+@media print {
+body { font-size:10pt; }
+.shell { max-width:none; padding:0; }
+.back-link,.skip-link { display:none; }
+.cards,.qualifications { display:block; }
+.card { margin-bottom:10px; break-inside:avoid; }
+details > .detail-body { display:block!important; }
+details::details-content { display:block!important; content-visibility:visible!important; height:auto!important; }
+summary { list-style:none; }
+summary::marker { content:''; }
+.table-wrap { overflow:visible; }
+table { font-size:9pt; }
+th,td { min-width:0; }
+section,details { break-inside:auto; }
+h2,summary { break-after:avoid; }
+a { text-decoration:none; }
+}
+
+.original { color:var(--muted); font-size:13px; }
+.task-line { display:grid; grid-template-columns:70px 1fr; gap:12px; margin-top:8px; }
+.task-line dt,.task-line dd { margin:0; }
+.plain-list { list-style:none; padding:0; margin:0; }
+.plain-list li { margin:0 0 14px; }
+.muted { color:var(--muted); font-size:13px; }
+.application-row { display:grid; grid-template-columns:90px 1fr; gap:14px; padding:9px 0; border-bottom:1px solid var(--line); }
+.application-row dt,.application-row dd { margin:0; }
+.source-url { display:block; font-size:12px; color:var(--muted); overflow-wrap:anywhere; }
+.qualifications { grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); }
+/* Explicit semantic pairs keep both columns readable at narrow widths. */
+.competency-evidence { width:100%; table-layout:fixed; margin:14px 0 0; font-size:14px; }
+.competency-evidence th,.competency-evidence td { width:50%; min-width:0; padding:10px; overflow-wrap:anywhere; word-break:normal; vertical-align:top; }
+.competency-evidence th { font-size:13px; }
+.company-context .context-uncertainty { font-size:12px; }
+@media (max-width:680px) {
+.competency-evidence th,.competency-evidence td { padding:9px 8px; }
+}
+@media print { .competency-evidence { font-size:10pt; } }
+.tab-nav { position: sticky; top: 0; z-index: 20; display: flex; flex-wrap: wrap; gap: 16px; margin: 0 0 24px; padding: 12px 0; background: #fff; border-bottom: 1px solid var(--line); }
+.tab-nav a { display: inline-flex; flex: 1 1 160px; min-height: 44px; align-items: center; justify-content: center; padding: 8px 20px; border: 1px solid transparent; border-radius: 999px; color: #71717a; background: white; font-size: 14px; font-weight: 600; letter-spacing: -.025em; line-height: 1.5; text-decoration: none; }
+.tab-nav a:hover { background: #f3f4f6; color: #18181b; }
+.tab-nav a[aria-selected="true"] { background: #000000; border-color: #000000; color: white; }
+.tab-nav a[aria-selected="true"]:hover { background: #2a2a2a; }
+.jd-panel[hidden] { display:none; }
+@media (max-width:680px) {
+.tab-nav { gap:8px; }
+html { scroll-padding-top:132px; }
+.tab-nav a { flex-basis:calc(50% - 8px); padding:8px 20px; font-size:13px; }
+}
+@media print {
+.tab-nav { display:none!important; }
+.jd-panel[hidden] { display:block!important; }
+}
+.posting-link { display:inline-flex; align-items:center; gap:6px; }
+.posting-link svg { display:block; flex:0 0 14px; width:14px; height:14px; }
+/* Shared report header: canonical company-report spacing and typography. */
+.shell { max-width:1120px; margin:0 auto; padding:48px 40px 64px; }
+.cover { padding:0 0 24px; border-bottom:1px solid var(--line); }
+.cover .eyebrow { margin:0 0 12px; color:#a1a1aa; font-size:10px; font-weight:500; letter-spacing:.2em; line-height:1.5; text-transform:uppercase; }
+.cover h1 { margin:0; color:var(--heading); font-family:Pretendard,Inter,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif; font-size:32px; font-weight:500; line-height:1.3; letter-spacing:-.025em; }
+.cover .report-meta { display:grid; grid-template-columns:1fr .6fr; gap:24px; margin:12px 0 0; }
+.cover .report-meta div { min-width:0; }
+.cover .report-meta dt { margin:0 0 4px; color:#a1a1aa; font-size:10px; font-weight:400; letter-spacing:.05em; line-height:1.65; }
+.cover .report-meta dd { margin:0; color:var(--muted); font-size:12px; font-weight:400; line-height:1.5; }
+.cover .header-note { margin:12px 0 0; color:var(--muted); font-size:12px; line-height:1.5; }
+@media(max-width:1023px) { .shell { padding:32px 24px 48px; } }
+@media(max-width:767px) { .shell { padding:24px 20px 40px; }.cover h1 { font-size:28px; }.cover .report-meta { grid-template-columns:1fr; gap:12px; } }
+@media print { .shell { max-width:none; padding:0; }.cover h1 { font-size:24pt; }.cover .report-meta { grid-template-columns:1fr .6fr; } }
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">본문으로 이동</a>
+<main class="shell" id="main">
+<a class="back-link" href="../../index.html" aria-label="공고별 지원 작업으로 돌아가기"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m10 3-5 5 5 5"/></svg><span>뒤로</span></a>
+<nav class="tab-nav" aria-label="JD 상세 분석"><a id="tab-tasks" href="#tasks" data-tab="tasks">핵심업무</a><a id="tab-preferred" href="#preferred" data-tab="preferred">우대사항</a><a id="tab-application" href="#application" data-tab="application">지원정보</a><a id="tab-context" href="#context" data-tab="context">회사맥락</a></nav>
+<header class="cover">
+<p class="eyebrow">JD 분석</p>
+<h1>IT - IT기획 / 신입</h1>
+<dl class="report-meta"><div><dt>회사</dt><dd>KT IS</dd></div><div><dt>기준일</dt><dd>2026-10-25</dd></div></dl>
+<p class="header-note"><a class="posting-link" href="https://recruit.kt.com/careers/269236" target="_blank" rel="noopener noreferrer" aria-label="공식 채용 공고 (새 탭에서 열림)"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 2h5v5M14 2 7 9M7 3H3a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V9"/></svg><span>공식 채용 공고</span></a></p>
+</header>
+<div class="lead"><p>봇과 멀티모달 AI 서비스를 기획하고 AICC 구축의 사업 조건·프로젝트 실행을 관리하는 역할이다.</p><p>고객 업무를 구현 가능한 서비스 요구로 바꾸는 판단과 계약·원가·검수 범위를 연결하는 역량이 함께 필요하다는 해석이다.</p></div>
+<section class="jd-panel" id="tasks" aria-labelledby="tab-tasks"><h2 id="tasks-heading">핵심업무</h2><div class="cards"><article class="card"><h3>챗봇·보이스봇 서비스기획<span class="references"> <a href="#source-4" aria-label="출처 4">[4]</a> <a href="#source-3" aria-label="출처 3">[3]</a></span></h3><p class="original">챗봇, 보이스봇 서비스기획</p><p>고객 업무와 대화 흐름을 정의하고 봇·상담사의 처리 범위를 서비스 요구로 구체화하는 일로 해석한다. 시나리오 작성·검수와 모니터링을 제공하는 회사 사업과 직접 연결돼 핵심으로 본다. 특정 봇 제품 배치는 미확인이다.</p><table class="competency-evidence"><thead><tr><th scope="col">중요 역량</th><th scope="col">필요 증거</th></tr></thead><tbody><tr><td>대화 시나리오·예외 설계</td><td>사용자 문의를 분류해 정상/실패/상담사 연결 흐름을 설계한 본인 판단과 검수 결과</td></tr><tr><td>운영 피드백을 통한 개선</td><td>오류·문의 분석이 요구사항과 시나리오 변경으로 이어진 기록. 프로토타입과 실운영을 구별</td></tr></tbody></table></article><article class="card"><h3>멀티모달 AI 웹서비스 기획<span class="references"> <a href="#source-4" aria-label="출처 4">[4]</a> <a href="#source-3" aria-label="출처 3">[3]</a></span></h3><p class="original">멀티모달(음성, 이미지 등) 기반 AI 웹서비스 기획</p><p>음성·이미지 등의 입력 특성을 사용 목적과 웹 이용 흐름으로 연결하는 기획이다. JD 직접 업무이므로 중요하지만 특정 공개 제품이 없어 세부 기능·고객 우선순위는 잠정이다. 모델 연구개발을 필수 업무로 확장하지 않는다.</p><table class="competency-evidence"><thead><tr><th scope="col">중요 역량</th><th scope="col">필요 증거</th></tr></thead><tbody><tr><td>AI 기능의 사용자 가치·제약 정의</td><td>입력 방식 선택, 기대 결과, 오류 조건과 사용자 확인 흐름을 기획한 근거</td></tr><tr><td>기술 활용과 검증</td><td>직접 구현·연동 또는 협업한 범위, 검증 방법·관측 결과와 한계를 구분한 산출물</td></tr></tbody></table></article><article class="card"><h3>AICC 사업기획·프로젝트 관리<span class="references"> <a href="#source-4" aria-label="출처 4">[4]</a> <a href="#source-3" aria-label="출처 3">[3]</a></span></h3><p class="original">AICC 구축 사업기획 및 계약, 원가 등 프로젝트 관리</p><p>고객 요구를 구축 범위와 계약·원가·일정의 실행 조건으로 연결하는 업무다. 구축·운영을 함께 제공하는 사업과 맞물려 봇 기획과 동등하게 중요한 수행 축으로 본다. 신입의 계약 승인권·손익 책임 범위는 미확인이다.</p><table class="competency-evidence"><thead><tr><th scope="col">중요 역량</th><th scope="col">필요 증거</th></tr></thead><tbody><tr><td>범위·일정·이해관계 조정</td><td>상충 요구·변경 요청을 근거로 조정한 결정과 본인 역할, 실제 완료·미완료 범위</td></tr><tr><td>사업 조건과 비용 이해</td><td>가정과 실제 값을 구분한 원가/자원 검토, 계약 또는 검수 범위를 정리한 기록. 학습 프로젝트를 상업 계약으로 표현하지 않음</td></tr></tbody></table></article></div></section><section class="jd-panel" id="preferred" aria-labelledby="tab-preferred"><h2 id="preferred-heading">우대사항</h2><ul class="plain-list"><li><p>IT 관련 전공 우대<span class="references"> <a href="#source-4" aria-label="출처 4">[4]</a></span></p><p class="muted">중요한 기반 역량 · 시스템·데이터·개발 협업 이해의 배경. 전공만으로 서비스기획 수행을 입증하는 것은 아니며 비전공 배제 조건으로 강화하지 않는다.</p></li><li><p>AI 및 챗봇, 보이스봇 관련 프로젝트 경험자 우대<span class="references"> <a href="#source-4" aria-label="출처 4">[4]</a></span></p><p class="muted">핵심 업무와 직접 결합 · 대화 흐름·AI 기능의 기획·검증 경험은 봇 업무의 수행 증거와 함께 읽는다. 프로젝트명만으로 본인 기여·성과를 확정하지 않는다.</p></li><li><p>AI 기술 활용 역량 우수자 우대<span class="references"> <a href="#source-4" aria-label="출처 4">[4]</a></span></p><p class="muted">공통 우대의 수행 가치 · 공고 공통 주석이며 IT기획의 멀티모달·봇 업무와 연결된다. 기술명 나열보다 적용 목적·검증·한계 근거가 중요하다는 분석이다.</p></li><li><p>KT AIVLE School 수료자는 IT 직무 지원 시 우대<span class="references"> <a href="#source-4" aria-label="출처 4">[4]</a></span></p><p class="muted">공식 추가 우대 · 공식 공고 이미지의 공통 주석에서 추가 확인했다. 수료 여부의 사실과 실제 프로젝트 수행 증거를 구분하며 다른 요건을 대체하지 않는다.</p></li></ul></section><section class="jd-panel" id="application" aria-labelledby="tab-application"><h2 id="application-heading">지원정보</h2><dl class="application"><div class="application-row"><dt>마감</dt><dd>2026.10.25 23:59<span class="references"> <a href="#source-4" aria-label="출처 4">[4]</a></span></dd></div><div class="application-row"><dt>지원 방법</dt><dd>KT그룹 채용 홈페이지 온라인 지원<span class="references"> <a href="#source-4" aria-label="출처 4">[4]</a></span></dd></div><div class="application-row"><dt>중복지원</dt><dd>1개 모집분야만 지원 가능<span class="references"> <a href="#source-4" aria-label="출처 4">[4]</a></span></dd></div><div class="application-row"><dt>채용형태</dt><dd>정규직 · 3개월 수습기간<span class="references"> <a href="#source-4" aria-label="출처 4">[4]</a></span></dd></div></dl></section><section class="jd-panel" id="context" aria-labelledby="tab-context"><h2 id="context-heading">회사맥락</h2><table class="competency-evidence company-context"><thead><tr><th scope="col">기업조사 내용</th><th scope="col">JD와의 연결</th></tr></thead><tbody><tr><td>KT IS는 시나리오 설계·검수와 구축 후 모니터링을 제공한다.<span class="references"> <a href="#source-3" aria-label="출처 3">[3]</a></span></td><td><p>봇 기획은 출시 전 흐름 설계와 운영 개선을 함께 다루는 일로 해석된다.</p><p class="muted context-uncertainty">미확인: 배치 제품·고객·오류 대응 체계 미확인</p></td></tr><tr><td>2026년 상반기 매출 증가와 영업이익 감소가 함께 나타났다.<span class="references"> <a href="#source-2" aria-label="출처 2">[2]</a></span></td><td><p>JD의 계약·원가 관리를 서비스 요구와 사업 조건의 연결로 읽을 수 있다.</p><p class="muted context-uncertainty">미확인: AI 사업 자체 손익 및 신입 책임 범위 미확인</p></td></tr></tbody></table></section><section aria-labelledby="sources-heading"><h2 id="sources-heading">출처</h2><ol class="sources"><li id="source-1"><a href="https://www.ktis.co.kr/bbsFileDownload?idx=247&amp;parentIdx=910&amp;id=businessReport" rel="noopener noreferrer">2025년 사업보고서 (DART 양식 공식 배포본)</a><span class="source-url">https://www.ktis.co.kr/bbsFileDownload?idx=247&amp;parentIdx=910&amp;id=businessReport</span></li><li id="source-2"><a href="https://www.ktis.co.kr/bbsFileDownload?idx=282&amp;parentIdx=1004&amp;id=irData" rel="noopener noreferrer">2026년 2분기 실적자료</a><span class="source-url">https://www.ktis.co.kr/bbsFileDownload?idx=282&amp;parentIdx=1004&amp;id=irData</span></li><li id="source-3"><a href="https://www.ktis.co.kr/AICC" rel="noopener noreferrer">AICC 사업소개</a><span class="source-url">https://www.ktis.co.kr/AICC</span></li><li id="source-4"><a href="https://recruit.kt.com/careers/269236" rel="noopener noreferrer">2026년 kt is 신입사원 공식 공고</a><span class="source-url">https://recruit.kt.com/careers/269236</span></li></ol></section>
+</main>
+<script>
+(function () {
+  'use strict';
+  var nav = document.querySelector('.tab-nav');
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-tab]'));
+  var panels = tabs.map(function (tab) { return document.getElementById(tab.getAttribute('href').slice(1)); });
+  if (!nav || tabs.length !== 4 || panels.some(function (panel) { return !panel; })) return;
+  function activate(index, focus, resetScroll) {
+    tabs.forEach(function (tab, i) {
+      tab.setAttribute('aria-selected', String(i === index));
+      tab.tabIndex = i === index ? 0 : -1;
+      panels[i].hidden = i !== index;
+    });
+    if (focus) tabs[index].focus();
+    // Only deliberate tab selection resets reading position; hash/history restoration stays native.
+    if (resetScroll) window.scrollTo(0, 0);
+  }
+  nav.setAttribute('role', 'tablist');
+  tabs.forEach(function (tab, index) {
+    tab.setAttribute('role', 'tab');
+    tab.setAttribute('aria-controls', panels[index].id);
+    panels[index].setAttribute('role', 'tabpanel');
+    panels[index].tabIndex = 0;
+    tab.addEventListener('click', function (event) {
+      event.preventDefault();
+      activate(index, false, true);
+      if (window.history && window.history.replaceState) window.history.replaceState(null, '', '#' + panels[index].id);
+    });
+    tab.addEventListener('keydown', function (event) {
+      var next = index;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else if (event.key === ' ' || event.key === 'Enter') next = index;
+      else return;
+      event.preventDefault();
+      activate(next, true, true);
+    });
+  });
+  function activateHash() {
+    if (window.location.hash === "#summary") { activate(0, false); return; }
+    var index = panels.findIndex(function (panel) { return '#' + panel.id === window.location.hash; });
+    if (index >= 0) activate(index, false);
+  }
+  activate(0, false);
+  activateHash();
+  window.addEventListener('hashchange', activateHash);
+}());
+</script>
+</body>
+</html>
+
