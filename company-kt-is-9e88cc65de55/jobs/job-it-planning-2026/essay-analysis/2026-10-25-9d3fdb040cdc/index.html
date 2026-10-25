@@ -1,0 +1,108 @@
+<!-- offline-essay-analysis:bundle:v1 -->
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>KT IS 문항 분석</title>
+<style>
+@font-face { font-family:Pretendard; src:url('../../../../../assets/fonts/PretendardVariable.woff2') format('woff2'); font-weight:100 900; font-display:swap; }
+:root { --page:#fff; --surface:#f9fafb; --heading:#18181b; --body:#27272a; --muted:#71717a; --line:#e5e7eb; --radius:8px; }
+* { box-sizing:border-box; }
+body { margin:0; min-width:0; background:var(--page); color:var(--body); font:14px/1.65 Pretendard,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif; word-break:keep-all; overflow-wrap:anywhere; }
+a { color:inherit; text-underline-offset:3px; }
+:focus-visible { outline:2px solid var(--heading); outline-offset:4px; }
+.skip-link { position:absolute; top:-80px; left:20px; padding:10px; background:white; }
+.skip-link:focus { top:8px; }
+.shell { max-width:1040px; margin:auto; padding:32px 32px 64px; }
+.back-link { display:inline-flex; align-items:center; gap:8px; min-height:44px; margin:0 0 20px; font-size:13px; line-height:14px; font-weight:500; color:var(--muted); text-decoration:none; }
+.back-link svg { display:block; flex:0 0 14px; width:14px; height:14px; }
+.back-link span { display:block; line-height:14px; }
+.back-link:hover { color:var(--heading); text-decoration:underline; }
+@media print { .back-link { display:none!important; } }
+h1,h2 { color:var(--heading); font-weight:500; }
+h1 { margin:8px 0 12px; font-size:32px; line-height:1.35; letter-spacing:-.04em; }
+h2 { margin:0 0 12px; font-size:18px; line-height:1.4; letter-spacing:-.025em; }
+p { margin:0 0 12px; }
+.eyebrow,.meta { color:var(--muted); font-size:12px; }
+.eyebrow { font-weight:600; letter-spacing:.025em; }
+.meta { display:flex; flex-wrap:wrap; gap:6px 16px; }
+.scope { margin-top:8px; color:var(--muted); font-size:12px; }
+.question { margin-top:24px; padding:24px; border:1px solid var(--line); border-radius:var(--radius); }
+.original { font-size:15px; line-height:1.7; }
+.limit { margin-bottom:12px; font-size:14px; }
+.label-detail { color:var(--muted); font-size:12px; align-self:center; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px; }
+.chip { display:inline-block; border:1px solid var(--line); border-radius:4px; background:var(--surface); padding:2px 7px; font-size:11px; line-height:1.6; }
+table { width:100%; table-layout:fixed; border-collapse:collapse; font-size:14px; }
+th,td { border-bottom:1px solid var(--line); text-align:left; vertical-align:top; padding:14px 14px; font-weight:400; word-break:normal; overflow-wrap:anywhere; }
+thead th { background:var(--surface); font-weight:500; }
+th:nth-child(2),td:nth-child(2) { width:110px; text-align:center; }
+th:nth-child(3),td:nth-child(3) { width:130px; text-align:center; }
+tfoot th,tfoot td { font-weight:500; }
+.draft-note { color:var(--muted); font-size:12px; margin:20px 0 0; }
+.draft-note + .draft-note { margin-top:8px; }
+@media (max-width:680px) {
+.shell { padding:20px 20px 40px; }
+h1 { font-size:28px; }
+.question { padding:16px; }
+th,td { padding:12px; }
+th:nth-child(2),td:nth-child(2) { width:70px; }
+th:nth-child(3),td:nth-child(3) { width:80px; }
+}
+@media print {
+body { font-size:10pt; }
+.shell { max-width:none; padding:0; }
+.back-link,.skip-link { display:none; }
+.question { break-inside:avoid; margin-top:16px; }
+a { text-decoration:none; }
+}
+/* Shared report header: canonical company-report spacing and typography. */
+.shell { max-width:1120px; margin:0 auto; padding:48px 40px 64px; }
+.cover { padding:0 0 24px; border-bottom:1px solid var(--line); }
+.cover .eyebrow { margin:0 0 12px; color:#a1a1aa; font-size:10px; font-weight:500; letter-spacing:.2em; line-height:1.5; text-transform:uppercase; }
+.cover h1 { margin:0; color:var(--heading); font-family:Pretendard,Inter,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif; font-size:32px; font-weight:500; line-height:1.3; letter-spacing:-.025em; }
+.cover .report-meta { display:grid; grid-template-columns:1fr .6fr; gap:24px; margin:12px 0 0; }
+.cover .report-meta div { min-width:0; }
+.cover .report-meta dt { margin:0 0 4px; color:#a1a1aa; font-size:10px; font-weight:400; letter-spacing:.05em; line-height:1.65; }
+.cover .report-meta dd { margin:0; color:var(--muted); font-size:12px; font-weight:400; line-height:1.5; }
+.cover .header-note { margin:12px 0 0; color:var(--muted); font-size:12px; line-height:1.5; }
+@media(max-width:1023px) { .shell { padding:32px 24px 48px; } }
+@media(max-width:767px) { .shell { padding:24px 20px 40px; }.cover h1 { font-size:28px; }.cover .report-meta { grid-template-columns:1fr; gap:12px; } }
+@media print { .shell { max-width:none; padding:0; }.cover h1 { font-size:24pt; }.cover .report-meta { grid-template-columns:1fr .6fr; } }
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">본문으로 이동</a>
+<main class="shell" id="main">
+<a class="back-link" href="../../index.html" aria-label="공고별 지원 작업으로 돌아가기"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m10 3-5 5 5 5"/></svg><span>뒤로</span></a>
+<header class="cover"><p class="eyebrow">문항 분석</p><h1>IT기획</h1><dl class="report-meta"><div><dt>회사</dt><dd>KT IS</dd></div><div><dt>기준일</dt><dd>2026-10-25</dd></div></dl></header>
+<p class="draft-note">초안 1200자는 권장 분량입니다. 최종 제출 전 1000자 이내로 줄이세요.</p>
+<p class="draft-note">우선순위는 글자 수 조정이 불가피할 때 적용하며, 모든 항목과 입사 후 활용 문장은 유지합니다.</p>
+<section class="question" id="question-question-1" aria-labelledby="heading-question-1">
+<h2 id="heading-question-1">문항 1</h2>
+<p class="original">kt is 및 지원 직무를 선택한 이유와 해당 직무를 수행하기 위해 준비한 경험을 구체적으로 작성해 주십시오.
+* 작성 시 다음 내용을 포함해 주시기 바랍니다.
+- kt is 및 지원 직무에 관심을 갖게 된 계기
+- 직무 관련 역량을 쌓기 위한 노력과 경험
+- 해당 경험에서 본인이 수행한 역할과 이를 통해 얻은 성과 및 배운 점</p>
+<p class="limit">최종 제출 1000자 (초안 1200자)</p>
+<div class="chips" aria-label="문항 핵심 요구"><span class="chip">회사지원동기</span><span class="chip">직무지원동기</span><span class="chip">강점</span></div>
+<table><thead><tr><th scope="col">내용</th><th scope="col">초안 분량</th><th scope="col">우선순위</th></tr></thead><tbody><tr><td>회사·직무 선택 이유와 관심 계기</td><td>250자</td><td>핵심 유지</td></tr><tr><td>직무 역량을 쌓은 노력·경험의 배경</td><td>200자</td><td>핵심 유지</td></tr><tr><td>본인 역할·구체적 행동과 성과</td><td>450자</td><td>핵심 유지</td></tr><tr><td>배운 점</td><td>200자</td><td>핵심 유지</td></tr><tr><td>입사 후 활용 한 문장(원문 밖 권고)</td><td>100자</td><td>한 문장 압축</td></tr></tbody><tfoot><tr><th scope="row">초안 합계</th><td>1200자</td><td></td></tr></tfoot></table>
+</section>
+<section class="question" id="question-question-2" aria-labelledby="heading-question-2">
+<h2 id="heading-question-2">문항 2</h2>
+<p class="original">공동의 목표를 달성하는 과정에서 어려움을 극복하거나 새로운 방법을 시도한 경험을 본인의 역할과 행동을 중심으로 작성해 주십시오.
+* 작성 시 다음 내용을 포함해 주시기 바랍니다.
+- 경험의 배경과 달성하고자 한 목표
+- 문제해결을 위한 구체적인 행동과 협업 과정
+- 경험의 결과와 본인의 기여 및 배운 점</p>
+<p class="limit">최종 제출 1000자 (초안 1200자)</p>
+<div class="chips" aria-label="문항 핵심 요구"><span class="chip">협업</span><span class="chip">강점</span></div>
+<table><thead><tr><th scope="col">내용</th><th scope="col">초안 분량</th><th scope="col">우선순위</th></tr></thead><tbody><tr><td>공동 목표·배경과 어려움 또는 새로운 시도의 이유</td><td>200자</td><td>핵심 유지</td></tr><tr><td>본인의 구체적 행동과 협업 과정</td><td>550자</td><td>핵심 유지</td></tr><tr><td>결과·기여·배운 점</td><td>350자</td><td>핵심 유지</td></tr><tr><td>입사 후 활용 한 문장(원문 밖 권고)</td><td>100자</td><td>한 문장 압축</td></tr></tbody><tfoot><tr><th scope="row">초안 합계</th><td>1200자</td><td></td></tr></tfoot></table>
+</section>
+</main>
+</body>
+</html>
