@@ -17,6 +17,7 @@
     rows.forEach(row => { row.hidden = !normalize(row.dataset.companyName).includes(query); if (!row.hidden) visible++; list.appendChild(row); });
     clear.hidden = !search.value;
     empty.hidden = visible !== 0;
+    count.classList.toggle('sr-only', !query);
     count.textContent = query ? `${visible}개 기업 검색됨` : `${visible}개 기업`;
   }
   function reset() { search.value = ''; update(); search.focus(); }

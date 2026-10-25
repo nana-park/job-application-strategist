@@ -16,5 +16,4 @@
 
 .search-submit{color:#fff;background:#7835a4}.search-submit:hover{background:#602786}
 
-.analysis-strip{background:#f3eafa;color:#765887}.strip-content{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 15px;min-height:64px;padding-top:18px;padding-bottom:18px;font-size:14px;font-weight:500;letter-spacing:0}.strip-content span{background:none;border:0;padding:0;cursor:default}@media(max-width:767px){.strip-content{font-size:12px;gap:6px 8px;min-height:64px}}
 .search-submit{white-space:nowrap;flex-shrink:0}
