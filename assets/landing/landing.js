@@ -22,6 +22,7 @@
   function reset() { search.value = ''; update(); search.focus(); }
   search.addEventListener('input', update);
   search.addEventListener('keydown', event => { if (event.key === 'Escape') reset(); });
+  document.querySelector('.filters').addEventListener('submit', event => { event.preventDefault(); update(); });
   sort.addEventListener('change', update);
   clear.addEventListener('click', reset);
   document.getElementById('reset-search').addEventListener('click', reset);

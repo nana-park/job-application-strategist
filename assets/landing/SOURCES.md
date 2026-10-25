@@ -9,3 +9,5 @@ Reused verified official identification assets from the previous local design:
 Starbucks storefront is generic decoration, not a company logo. The research-note object and chart bars are decorative illustrations, not business statistics. Implemented from the parent's design specification; this executor has not seen the original reference pixels. No people, customer counts, testimonials or partnerships are fabricated.
 
 Starbucks: official homepage https://www.starbucks.com/ references https://www.starbucks.com/assets/icons/siren.svg (retrieved 2026-10-25). Local starbucks.svg replaces the earlier generic storefront illustration. Unmodified official logo; identification only.
+
+Breadme wordmark: existing breadme src/shared/layout/OriginalHeader/OriginalHeader.tsx, original orange (#D97706) bread + black me text treatment. No generated logo.
