@@ -17,3 +17,6 @@
 .search-submit{color:#fff;background:#7835a4}.search-submit:hover{background:#602786}
 
 .search-submit{white-space:nowrap;flex-shrink:0}
+
+/* Original Novex wordmark: preserve its native proportions. */
+.novex-brand{display:block;width:96px;height:auto;flex-shrink:0}@media(max-width:767px){.novex-brand{width:82px}}
