@@ -18,7 +18,7 @@
     clear.hidden = !search.value;
     empty.hidden = visible !== 0;
     count.classList.toggle('sr-only', !query);
-    count.textContent = query ? `${visible}개 기업 검색됨` : `${visible}개 기업`;
+    count.textContent = `${visible} ${visible === 1 ? 'company' : 'companies'}${query ? ' found' : ''}`;
   }
   function reset() { search.value = ''; update(); search.focus(); }
   search.addEventListener('input', update);

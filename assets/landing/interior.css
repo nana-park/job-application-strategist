@@ -16,3 +16,6 @@ body.workspace-interior{--page:#faf5ff;--ink:#251b33;--heading:#251b33;--body:#2
 
 /* Match the approved home wordmark without inheriting report typography. */
 .workspace-nav{height:90px;padding-top:0;padding-bottom:0}.workspace-nav .breadme-brand{display:block;flex-shrink:0;font-family:Pretendard,'Malgun Gothic',sans-serif;line-height:normal;white-space:nowrap}.workspace-nav .breadme-brand>span{display:inline;font:inherit;letter-spacing:inherit;white-space:inherit}@media(max-width:767px){.workspace-nav{height:74px;padding-top:0;padding-bottom:0}}
+
+/* Original Novex wordmark: preserve its native proportions. */
+.novex-brand{display:block;width:96px;height:auto;flex-shrink:0}@media(max-width:767px){.novex-brand{width:82px}}
