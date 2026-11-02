@@ -14,7 +14,7 @@
       ? (a, b) => collator.compare(a.dataset.companyName, b.dataset.companyName)
       : (a, b) => Number(a.dataset.recentOrder) - Number(b.dataset.recentOrder));
     let visible = 0;
-    rows.forEach(row => { row.hidden = !normalize(row.dataset.companyName).includes(query); if (!row.hidden) visible++; list.appendChild(row); });
+    rows.forEach(row => { row.hidden = ![row.dataset.companyName, row.dataset.companyNameEn || ''].some(name => normalize(name).includes(query)); if (!row.hidden) visible++; list.appendChild(row); });
     clear.hidden = !search.value;
     empty.hidden = visible !== 0;
     count.classList.toggle('sr-only', !query);
