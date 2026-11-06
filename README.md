@@ -22,6 +22,15 @@ There is no background pull or sync from the private source. Authorized maintain
 - Application Strategy (지원전략)
 - Employee Interviews (현직자 인터뷰)
 
+## Public landing page rules
+
+- The outermost landing page is English: company display names, research dates and card actions. Keep Korean names in `data-company-name` and English names in `data-company-name-en` so both remain searchable. Research report bodies keep their original language.
+- Before publishing a new company, replace the generic `Career notes` visual with its official logo under `assets/landing/`. Record its official source here. Match existing card sizing; do not redraw or distort the logo.
+- Writer-generated new cards are provisional presentation. Review their logo and English copy before promotion; updates must preserve approved visuals and wording while refreshing the date.
+- Verify the live landing page, both language searches, logo loading and the company/report link after deployment. A successful push alone is not completion.
+
+Olive Young logo: https://corp.oliveyoung.com/img/common/logo/logo-493996034cacc186f5e6965f8d5b876f.svg (official corporate site, checked 2026-11-06).
+
 ## Structure and setup
 
 Static HTML, CSS, and JavaScript, served on GitHub Pages without a build step.
