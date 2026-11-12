@@ -43,3 +43,5 @@ Static HTML, CSS, and JavaScript, served on GitHub Pages without a build step.
 Serve the repository root with a static HTTP server for local use. GitHub Pages publishes the root (`/`) of `main` with `.nojekyll`; internal links and image paths are relative.
 
 The screenshot shows the public home page without unlocked personal materials; `synthetic` and `demo` pages under `tools/` use synthetic data and public test keys.
+
+NAVER logo: https://www.navercorp.com/img/common/logo.svg (official corporate site stylesheet, checked 2026-11-12).
